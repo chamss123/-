@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>صفحة الانتظار </title>
+        <meta charset="UTF-8">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins', sans-serif;
+            }
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                background: #060a1f;
+            }
+            .wrapper{
+                display: inline-flex;
+            }
+            .wrapper .dynamic{
+                margin-left: 15px;
+                height: 90px;
+                line-height: 90px;
+                overflow: hidden;
+            }
+            .dynamic li{
+                color: #009425;
+                list-style: none;
+                font-size: 60px;
+                font-weight: 500;
+                position: relative;
+                top: 0;
+                animation: slide 10s steps(4) infinite;
+            }
+            @keyframes slide {
+                100%{
+                    top: -360px;
+                }
+            }
+            .dynamic li  span{
+                position: relative;
+
+            }
+            .dynamic li  span::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background:#060a1f;
+                border-left: 3px solid #ffffff;
+                animation: typing  2.5s steps(21) infinite;
+            }
+            @keyframes typing {
+                100%{
+                    left: 100%;
+                    margin: 0 -40px 0 40px;
+                }
+            }
+            </style>
+        </head>
+        <body>
+            <center><div class="wrapper">
+                <ul class="dynamic">
+                    <li><span>Futur is LOADING ...</span></li>
+                    <li><span>Avec</span></li>
+                    <li><span>Chamss Eddin</span></li>
+                    <li><span>Tanck You</span></li>
+                    
+                </ul>
+            </div>
+            <META http-equiv="refresh" content="10;URL=index.html">
+            </center>
+        </body>
